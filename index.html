@@ -46,12 +46,14 @@
             list-style: none;
             gap: 20px;
         }
+        
 
         nav ul li a {
             text-decoration: none;
             color: white;
             transition: color 0.3s;
         }
+     
         nav ul li a:hover{
            font-size: larger;
             color: rgb(97, 109, 183);
@@ -129,9 +131,165 @@
             border-radius: 5px;
         }
 
-        .skill-bar .filled {
+        .skill-bar .filledS {
             background: rgb(140, 99, 178);
             height: 100%;
+            width: 0%;
+            animation: fillBarS 2s ease forwards;
+        }
+        .skill-bar .filledJ {
+            background: rgb(140, 99, 178);
+            height: 100%;
+            width: 0%;
+            animation: fillBarJ 2s ease forwards;
+        }
+        .skill-bar .filledHC {
+            background: rgb(140, 99, 178);
+            height: 100%;
+            width: 0%;
+            animation: fillBarHC 2s ease forwards;
+        }
+        .skill-bar .filledJS {
+            background: rgb(140, 99, 178);
+            height: 100%;
+            width: 0%;
+            animation: fillBarJS 2s ease forwards;
+        }
+        .skill-bar .filledA {
+            background: rgb(140, 99, 178);
+            height: 100%;
+            width: 0%;
+            animation: fillBarA 2s ease forwards;
+        }
+        .certificates-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.certificate-icon {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto 10px;
+}
+
+.certificates-section h1 {
+    font-size: 2rem;
+    color: rgb(140, 99, 178);
+    margin-bottom: 20px;
+}
+
+.certificate-list {
+    margin-top: 20px;
+}
+
+.certi {
+    margin: 10px 0;
+    background-color: rgb(140, 99, 178);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certi h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.certi a {
+    color: white;
+    text-decoration: none;
+}
+
+.certi:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fillBar {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 50%;
+            }
+        }
+        @keyframes fillBarJ {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 75%;
+            }
+        }
+        @keyframes fillBarJS {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 80%;
+            }
+        }
+        @keyframes fillBarA {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 69%;
+            }
+        }
+        @keyframes fillBarHC {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 85%;
+            }
+        }
+        @keyframes fillBarS {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 80%;
+            }
         }
 
         /* Projects Section */
@@ -242,12 +400,64 @@
     color: rgb(140, 99, 178);
     text-decoration: none;
     font-size: 1rem;
-    transition: color 0.3s;
+    transition: color 0.5s;
 }
 
 .profile-card a:hover {
     color: white;
 }
+/* General Styling */
+
+.Experience {
+    padding: 20px;
+    background-color: #04010a;
+}
+
+.Experience h1 {
+    text-align: center;
+    color: rgb(140, 99, 178);
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.training {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.training h3 {
+    color: rgb(140, 99, 178);
+    margin-bottom: 10px;
+}
+
+.training p {
+    margin: 5px 0 15px;
+    font-size: 1em;
+}
+
+.certificate {
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: rgb(140, 99, 178);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.certificate:hover {
+    background-color: rgb(170, 120, 200);
+}
+.certi{
+    color: white;
+
+}
+
 
     </style>
 </head>
@@ -258,9 +468,9 @@
         <nav>
             <div class="left">Sumegh Bansode</div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#" >Home</a></li>
+                <li><a href="#about" >About</a></li>
+                <li><a href="#projects" >Projects</a></li>
                 <li>
                     <a href="#">Contact</a>
                     <div class="dropdown">
@@ -289,30 +499,37 @@
             <div class="skill-card">
                 <h3>HTML & CSS</h3>
                 <div class="skill-bar">
-                    <div class="filled" style="width: 90%;"></div>
+                    <div class="filledHC" style="width: 90%;"></div>
                 </div>
                 <p>90%</p>
             </div>
             <div class="skill-card">
                 <h3>JavaScript</h3>
                 <div class="skill-bar">
-                    <div class="filled" style="width: 80%;"></div>
+                    <div class="filledJS" style="width: 80%;"></div>
                 </div>
                 <p>80%</p>
             </div>
             <div class="skill-card">
-                <h3>Machine Learning</h3>
+                <h3>Java</h3>
                 <div class="skill-bar">
-                    <div class="filled" style="width: 70%;"></div>
+                    <div class="filledJ" style="width: 70%;"></div>
                 </div>
                 <p>70%</p>
             </div>
             <div class="skill-card">
                 <h3>Spring Boot</h3>
                 <div class="skill-bar">
-                    <div class="filled" style="width: 75%;"></div>
+                    <div class="filledS" style="width: 75%;"></div>
                 </div>
                 <p>75%</p>
+            </div>
+            <div class="skill-card">
+                <h3>AWS</h3>
+                <div class="skill-bar">
+                    <div class="filledA" style="width: 75%;"></div>
+                </div>
+                <p>70%</p>
             </div>
         </div>
     </section>
@@ -347,6 +564,20 @@
         </div>
      
     </section>
+    <section class="Experience">
+        <h1>Industrial Traning </h1>
+         <div><h3 class="ex1"><h3>C++ Training</h3>
+         <p>Wonderful Experience For Leaning C++ with Industrial Standard </p>
+         </div>
+        <div><h3 class="ex1"><h3>Dot Net Devloper</h3>
+            <p>Introduction to Dot net Technologies</p>
+           </div>
+           <div><h3 class="ex1"><h3>FrontEnd Technologies</h3>
+            <p>Learging new and Trending Frontend Technologies</p>
+           </div>
+
+        
+    </section>
     <!-- Profiles Section -->
 <section class="profiles">
     <h1>Profiles</h1>
@@ -372,6 +603,27 @@
             <a href="https://www.codechef.com/users/bansodesumegh" target="_blank">CodeChef</a>
         </div>
     </div>
+</section>
+<section>
+    <div class="certificates-section">
+        <img src="https://thumbs.dreamstime.com/b/certificate-icon-linear-logo-mark-set-collection-black-white-web-certificate-icon-linear-logo-mark-black-white-330210865.jpg" 
+             alt="Certificate Icon" class="certificate-icon">
+        <h1>Certificates</h1>   
+        <div class="certificate-list">
+            <div class="certi">
+                <a href="https://drive.google.com/file/d/1BvwEmkR7I1y3yQdUOTlyianLg-bXHf7b/view?usp=sharing" target="_blank">
+                    <h3>Core Java</h3>
+                </a>
+            </div> 
+            <div class="certi">
+                <a href="https://drive.google.com/file/d/1XEK1JRkQMXIYIJvLFHZi601ruYYkhKd9/view?usp=sharing" target="_blank">
+                    <h3>C++ & DSA</h3>
+                </a>
+            </div>  
+        </div>
+    </div>
+    
+
 </section>
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
